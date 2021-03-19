@@ -1,0 +1,7 @@
+@article{kaya2020uncalibrated,
+  title={Uncalibrated Neural Inverse Rendering for Photometric Stereo of General Surfaces},
+  author={Kaya, Berk and Kumar, Suryansh and Oliveira, Carlos and Ferrari, Vittorio and Van Gool, Luc},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  year={2021}
+}
+

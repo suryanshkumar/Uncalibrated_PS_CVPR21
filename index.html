@@ -1,1 +1,362 @@
-<h1>Hello Webpage</h1>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-weight: 300;
+		font-size: 16px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+
+	h1 {
+		font-weight: 300;
+	}
+
+	.disclaimerbox {
+		background-color: #eee;
+		border: 1px solid #eeeeee;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+
+	a:link,
+	a:visited {
+		color: #1367a7;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: #208799;
+	}
+
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+
+	.layered-paper-big {
+		/* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+			0px 0px 1px 1px rgba(0, 0, 0, 0.35),
+			/* The top layer shadow */
+			5px 5px 0 0px #fff,
+			/* The second layer */
+			5px 5px 1px 1px rgba(0, 0, 0, 0.35),
+			/* The second layer shadow */
+			10px 10px 0 0px #fff,
+			/* The third layer */
+			10px 10px 1px 1px rgba(0, 0, 0, 0.35),
+			/* The third layer shadow */
+			15px 15px 0 0px #fff,
+			/* The fourth layer */
+			15px 15px 1px 1px rgba(0, 0, 0, 0.35),
+			/* The fourth layer shadow */
+			20px 20px 0 0px #fff,
+			/* The fifth layer */
+			20px 20px 1px 1px rgba(0, 0, 0, 0.35),
+			/* The fifth layer shadow */
+			25px 25px 0 0px #fff,
+			/* The fifth layer */
+			25px 25px 1px 1px rgba(0, 0, 0, 0.35);
+		/* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper {
+		/* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+			0px 0px 1px 1px rgba(0, 0, 0, 0.35),
+			/* The top layer shadow */
+			5px 5px 0 0px #fff,
+			/* The second layer */
+			5px 5px 1px 1px rgba(0, 0, 0, 0.35),
+			/* The second layer shadow */
+			10px 10px 0 0px #fff,
+			/* The third layer */
+			10px 10px 1px 1px rgba(0, 0, 0, 0.35);
+		/* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	hr {
+		border: 0;
+		height: 1.5px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+
+<head>
+	<title>Uncalibrated Neural Inverse Rendering for Photometric Stereo of General Surfaces</title>
+	<meta property="og:image" content="" />
+	<meta property="og:title" content="Uncalibrated Neural Inverse Rendering for Photometric Stereo of General Surfaces" />
+	<link href='https://fonts.googleapis.com/css?family=Lora:400italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px">Uncalibrated Neural Inverse Rendering for Photometric Stereo of General Surfaces</span>
+	</center>
+	<br>
+
+	<table align=center width=750px>
+		<tr>
+			<td align=center width=100px>
+				<center>
+					<span style="font-size:18px"><a href="https://scholar.google.com/citations?user=Lgz3NgkAAAAJ&hl=en">Berk Kaya</a><sup>1</sup></span>
+				</center>
+			</td>
+			<td align=center width=100px>
+				<center>
+					<span style="font-size:18px"><a href="https://suryanshkumar.github.io/">Suryansh Kumar</a><sup>1</sup></span>
+				</center>
+			</td>
+			<td align=center width=100px>
+				<center>
+					<span style="font-size:18px"><a href="">Carlos Oliveira</a><sup>1</sup></span>
+				</center>
+			</td>
+			<td align=center width=100px>
+				<center>
+					<span style="font-size:18px"><a href="https://sites.google.com/view/vittoferrari">Vittorio Ferrari</a><sup>2</sup></span>
+				</center>
+			</td>
+			<td align=center width=100px>
+				<center>
+					<span style="font-size:18px"><a href="https://scholar.google.com/citations?user=TwMib_QAAAAJ&hl=en">Luc Van Gool</a><sup>1, 3</sup></span>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+	<table align=center width=700px>
+		<tr>
+			<td align=center width=100px>
+				<center>
+					<span style="font-size:20px">ETH Zurich<sup>1</sup>, Google Research<sup>2</sup>, KU Lueven</span><sup>3</sup></span>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+	<table align=center width=700px>
+		<tr>
+			<td align=center width=100px>
+				<center>
+					<span style="font-size:20px">Conference on Computer Vision and Pattern Recognition (CVPR), 2021.
+					</span>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<!-- Image for the project-->
+	<table align=center width=900px>
+		<tr>
+			<td width=450px>
+				<center>
+					<a><img src="./images/Tablet_Light_Effect_1.png" height="500px"></img></href></a><br>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+
+	<!-- Abstract of the project-->
+	<p style="text-align: justify;">
+		<span style="font-weight:bold">Abstract</span>
+		<br>
+		<font style="font-family: Lora; font-size: 100%">
+		This paper presents an uncalibrated deep neural network framework for the photometric stereo problem. For training models to solve the problem, existing neural network-based methods either require exact light directions or ground-truth surface normals of the object or both. However, in practice, it is challenging to procure both of this information precisely, which restricts the broader adoption of photometric stereo algorithms for vision application. To bypass this
+		difficulty, we propose an uncalibrated neural inverse rendering approach to this problem. Our method first estimates the
+		light directions from the input images and then optimizes an image reconstruction loss to calculate the surface normals, bidirectional reflectance distribution function value, and depth. Additionally, our formulation explicitly models the concave and convex parts of a complex surface to consider the effects of interreflections in the image formation process. Extensive evaluation of the proposed method on the challenging subjects generally shows comparable or better
+		results than the supervised and classical approaches.
+		</font>
+	</p><br><br>
+	<hr>
+
+	<!--Paper title, thumbnails, and publication details -->
+	<table align=center width=1000>
+		<center>
+			<h1>Paper</h1>
+		</center>
+		<tr>
+			<td><a
+					href=""><img
+						style="height:200px" src="./images/CVPR21_thumbnail.png" /></a></td>
+			<td><span style="font-size:16pt">Uncalibrated Neural Inverse Rendering for Photometric Stereo of General Surfaces<br><br>
+					<i>Berk Kaya, Suryansh Kumar, Carlos Oliveira, Vittorio Ferrari, Luc Van Gool.</i><br><br>
+					IEEE/CVF <span style="font-weight:bold">CVPR</span> 2021, Tennessee, USA (Virtual).<br></td>
+		</tr>
+	</table>
+	<br>
+
+	<!-- paper link, supplementary link, bibtex link-->
+	<table align=center width=180px>
+		<tr>
+			<td>
+				<span style="font-size:14pt">
+					<center><a href="">[Paper]</a>
+					</center>
+				</span>
+			</td>
+
+			<td>
+				<span style="font-size:14pt">
+					<center><a href="">[Supplementary]</a>
+					</center>
+				</span>
+			</td>
+
+			<td><span style="font-size:14pt">
+					<center><a href="./bibtex.txt">[Bibtex]</a></center>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+
+	<!--Some Results-->
+	<center>
+		<h1>Results</h1>
+	</center>
+	<table align=center width=1100px>
+		<tr>
+			<td width=400px>
+				<center> <span align="top" style="font-size:20px">DiLiGenT Dataset</span><br><br> </center>
+			</td>
+			<td width=50px> </td>
+			<td width=400px>
+				<center> <span align="top" style="font-size:20px">Our Dataset</span><br><br> </center>
+			</td>
+		</tr>
+
+		<!--picture or link-->
+		<tr height="300px">
+			<td valign="top" width=400px>
+				<center>
+					<a><img src="./images/diligent_dataset_results.png" height="300px"></img></href></a>
+				</center>
+			</td>
+
+			<td width=50px> </td>
+			<td valign="top" width=400px>
+				<center>
+					<a><img src="./images/new_dataset_results.png" height="300px"></img></href></a>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+
+	<!--Code or github link-->
+	<center>
+		<h1>Code and Dataset</h1>
+	</center>
+	<table align=center width=800px>
+		<tr>
+			<center>
+				<br><span style="font-size:28px">&nbsp;<a
+						href="https://github.com/suryanshkumar">[GitHub]</a></span><span style="font-size:28px"></span>
+					<span style="font-size:28px">&nbsp;<a
+						href="https://github.com/suryanshkumar">[Dataset]</a></span><span style="font-size:28px"></span>
+				<br>
+			</center>
+		</tr>
+	</table>
+	<br>
+	<hr>
+
+	<!--Results (Pictures or Youtube link) or Presentation link-->
+	<a name="results"></a>
+	<center>
+		<h1>Dataset Acquisition Setup and Statistical Comparison</h1>
+	</center><br><br>
+	<table align=center width=1100px>
+		<!--Video link-->
+		<tr height="400px">
+			<td valign="top" width=1100px>
+				<center>
+					<video width="900" controls autoplay muted loop> 
+						<source src="./videos/cvpr21_video.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+
+	<!--Acknowledgements-->
+	<table align=center width=1100px>
+		<center>
+			<h1>Acknowledgements</h1>
+		</center>
+		<tr>
+			<td>
+				<img style="height:50px" src="./images/eth_zurich_logo.png">
+			</td>
+			<td>
+				<img style="height:50px" src="./images/cvl.png">
+			</td>
+			<td>
+				<img style="height:50px" src="./images/google_logo.png">
+			</td>
+
+			<td>
+				<p style="text-align: justify;">
+					This work was funded by Focused Research Award from Google, 2019-HE-318, 2019-HE-323. Suryansh Kumar's project is supported by "ETH Zurich Foundation and Google, Project Number: 2019-HE-323" for bringing together best academic and industrial research.
+				</p>
+			</td>
+		</tr>
+	</table>
+	<br><br>
+</body>
+
+</html>
